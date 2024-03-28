@@ -53,12 +53,14 @@ const Login = () => {
                         />
                     </div>
 
-                    <div className="divider ">OR</div>
+                    <div className="text-center py-2 ">OR</div>
 
-                    <FcGoogle />
+                    <div className="bg-gray-200 p-2 flex justify-center rounded-lg">
+                        <FcGoogle className="text-center text-3xl" />
+                    </div>
 
                     <p className="mt-4 block text-center font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
-                        You have no account ? Please<Link to='/signUp'><Button size="xs" isProcessing>Sign Up</Button></Link>
+                        You have no account ? Please <Link to='/signUp'><a href="/signUp" className="text-blue-800">SignUP</a></Link>
                     </p>
 
 
