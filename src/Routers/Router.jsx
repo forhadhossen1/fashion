@@ -6,6 +6,7 @@ import SignUp from "../Pages/SignUp/SignUp";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Man from "../Pages/Man/Man";
 import Women from "../Pages/Woman/Women";
+import Kids from "../Pages/Kids/Kids";
 
 const router = createBrowserRouter([
     {
@@ -18,12 +19,16 @@ const router = createBrowserRouter([
                 element: <Home></Home>
             },
             {
-                path : '/man',
-                element : <Man></Man>
+                path: '/man',
+                element: <Man></Man>
             },
             {
-                path : '/woman',
+                path: '/woman',
                 element: <Women></Women>
+            },
+            {
+                path: '/kids',
+                element: <Kids></Kids>
             },
             {
                 path: '/login',
