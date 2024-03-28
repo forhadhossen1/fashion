@@ -1,9 +1,11 @@
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
+import Swal from "sweetalert2";
 
 const Login = () => {
     const { signIn } = useAuth()
+    const navigate = useNavigate();
 
     const handleLogin = e => {
         e.preventDefault();
@@ -15,6 +17,18 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                Swal.fire({
+                    position: "middle",
+                    icon: "success",
+                    title: "Login success",
+                    showConfirmButton: false,
+                    timer: 1000
+                });
+                navigate(location?.state ? location.state : '/')
+            })
+            .catch(error => {
+                console.error(error)
+                Swal.fire("Opps", "Provide Correct email and password", "error");
             })
     }
 

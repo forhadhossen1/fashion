@@ -31,6 +31,24 @@ const Header = () => {
           <h2 className="text-3xl font-bold "><span className="text-4xl text-purple-700">F</span>ashion</h2>
         </Navbar.Brand>
 
+ 
+
+
+        <Navbar.Collapse>
+          <Navbar active>
+            <Link to='/'>Home</Link>
+          </Navbar>
+          <Navbar>
+            <Link to='/'>Collection</Link>
+          </Navbar>
+          <Navbar>
+            <Link to='/'>Collection</Link>
+          </Navbar>
+          <Navbar>
+            <Link to='/'>Collection</Link>
+          </Navbar>
+        </Navbar.Collapse>
+
         {
           user ?
             <div className="flex md:order-2">
@@ -49,7 +67,7 @@ const Header = () => {
                 <Dropdown.Item>Settings</Dropdown.Item>
                 <Dropdown.Item>Earnings</Dropdown.Item>
                 <Dropdown.Divider />
-                <Dropdown.Item onClick={handleLogOut}>Sign out</Dropdown.Item>
+                <Dropdown.Item onClick={handleLogOut}>Log Out</Dropdown.Item>
               </Dropdown>
               <Navbar.Toggle />
             </div>
@@ -59,19 +77,6 @@ const Header = () => {
             </Navbar>
         }
 
-
-
-        <Navbar.Collapse>
-          <Navbar active>
-            <Link to='/'>Home</Link>
-          </Navbar>
-          <Navbar>
-            <Link to='/'>Collection</Link>
-          </Navbar>
-          <Navbar>
-            <Link to='/login'>Login</Link>
-          </Navbar>
-        </Navbar.Collapse>
       </Navbar>
     </div>
   );
