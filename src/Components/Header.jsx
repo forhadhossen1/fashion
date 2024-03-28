@@ -38,12 +38,12 @@ const Header = () => {
                 arrowIcon={false}
                 inline
                 label={
-                  <Avatar alt="User settings" img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" rounded />
+                  <Avatar alt="User settings" img={user?.photoURL} rounded />
                 }
               >
                 <Dropdown.Header>
-                  <span className="block text-sm">Bonnie Green</span>
-                  <span className="block truncate text-sm font-medium">name@flowbite.com</span>
+                  <span className="block text-sm">{user?.displayName}</span>
+                  <span className="block truncate text-sm font-medium">{user?.email}</span>
                 </Dropdown.Header>
                 <Dropdown.Item>Dashboard</Dropdown.Item>
                 <Dropdown.Item>Settings</Dropdown.Item>
