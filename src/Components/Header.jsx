@@ -39,13 +39,13 @@ const Header = () => {
             <Link to='/'>Home</Link>
           </Navbar>
           <Navbar>
-            <Link to='/'>Collection</Link>
+            <Link to='/man'>Man</Link>
           </Navbar>
           <Navbar>
-            <Link to='/'>Collection</Link>
+            <Link to='/women'>Women</Link>
           </Navbar>
           <Navbar>
-            <Link to='/'>Collection</Link>
+            <Link to='/Kids'>Kids</Link>
           </Navbar>
         </Navbar.Collapse>
 

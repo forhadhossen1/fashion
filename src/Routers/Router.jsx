@@ -23,7 +23,7 @@ const router = createBrowserRouter([
                 element: <Man></Man>
             },
             {
-                path: '/woman',
+                path: '/women',
                 element: <Women></Women>
             },
             {
