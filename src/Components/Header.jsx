@@ -1,12 +1,15 @@
 import { Avatar, Dropdown, Navbar } from "flowbite-react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
-    return (
-        <Navbar fluid rounded>
-        <Navbar.Brand href="https://flowbite-react.com">
-          <img src="/src/assets/fashion-favicon.png" className="mr-3 h-6 sm:h-9" alt="Flowbite React Logo" />
-          <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Fashion</span>
+  return (
+    <div className="">
+      <Navbar fluid rounded>
+        <Navbar.Brand>
+          <h2 className="text-3xl font-bold "><span className="text-4xl text-purple-700">F</span>ashion</h2>
         </Navbar.Brand>
+
+        {/* profile section */}
         <div className="flex md:order-2">
           <Dropdown
             arrowIcon={false}
@@ -27,17 +30,22 @@ const Header = () => {
           </Dropdown>
           <Navbar.Toggle />
         </div>
+
+
         <Navbar.Collapse>
-          <Navbar.Link href="#" active>
-            Home
-          </Navbar.Link>
-          <Navbar.Link href="#">About</Navbar.Link>
-          <Navbar.Link href="#">Services</Navbar.Link>
-          <Navbar.Link href="#">Pricing</Navbar.Link>
-          <Navbar.Link href="#">Contact</Navbar.Link>
+          <Navbar active>
+            <Link to='/'>Home</Link>
+          </Navbar>
+          <Navbar>
+            <Link to='/'>Collection</Link>
+          </Navbar>
+          <Navbar>
+            <Link to='/login'>Login</Link>
+          </Navbar>
         </Navbar.Collapse>
       </Navbar>
-    );
+    </div>
+  );
 };
 
 export default Header;
