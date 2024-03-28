@@ -16,6 +16,14 @@ const Header = () => {
     </div>
   }
 
+
+  const handleLogOut = () => {
+    logOut()
+      .then(result => { console.log(result) })
+      .catch(error => { console.log(error) })
+  }
+
+
   return (
     <div className="">
       <Navbar fluid rounded>
@@ -40,7 +48,7 @@ const Header = () => {
             <Dropdown.Item>Settings</Dropdown.Item>
             <Dropdown.Item>Earnings</Dropdown.Item>
             <Dropdown.Divider />
-            <Dropdown.Item>Sign out</Dropdown.Item>
+            <Dropdown.Item onClick={handleLogOut}>Sign out</Dropdown.Item>
           </Dropdown>
           <Navbar.Toggle />
         </div>
