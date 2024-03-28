@@ -31,27 +31,34 @@ const Header = () => {
           <h2 className="text-3xl font-bold "><span className="text-4xl text-purple-700">F</span>ashion</h2>
         </Navbar.Brand>
 
-        {/* profile section */}
-        <div className="flex md:order-2">
-          <Dropdown
-            arrowIcon={false}
-            inline
-            label={
-              <Avatar alt="User settings" img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" rounded />
-            }
-          >
-            <Dropdown.Header>
-              <span className="block text-sm">Bonnie Green</span>
-              <span className="block truncate text-sm font-medium">name@flowbite.com</span>
-            </Dropdown.Header>
-            <Dropdown.Item>Dashboard</Dropdown.Item>
-            <Dropdown.Item>Settings</Dropdown.Item>
-            <Dropdown.Item>Earnings</Dropdown.Item>
-            <Dropdown.Divider />
-            <Dropdown.Item onClick={handleLogOut}>Sign out</Dropdown.Item>
-          </Dropdown>
-          <Navbar.Toggle />
-        </div>
+        {
+          user ?
+            <div className="flex md:order-2">
+              <Dropdown
+                arrowIcon={false}
+                inline
+                label={
+                  <Avatar alt="User settings" img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" rounded />
+                }
+              >
+                <Dropdown.Header>
+                  <span className="block text-sm">Bonnie Green</span>
+                  <span className="block truncate text-sm font-medium">name@flowbite.com</span>
+                </Dropdown.Header>
+                <Dropdown.Item>Dashboard</Dropdown.Item>
+                <Dropdown.Item>Settings</Dropdown.Item>
+                <Dropdown.Item>Earnings</Dropdown.Item>
+                <Dropdown.Divider />
+                <Dropdown.Item onClick={handleLogOut}>Sign out</Dropdown.Item>
+              </Dropdown>
+              <Navbar.Toggle />
+            </div>
+            :
+            <Navbar>
+              <Link to='/login'>Login</Link>
+            </Navbar>
+        }
+
 
 
         <Navbar.Collapse>
