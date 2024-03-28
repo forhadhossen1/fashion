@@ -1,7 +1,9 @@
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth";
 
 const Login = () => {
+    const { signIn } = useAuth()
 
     const handleLogin = e => {
         e.preventDefault();
@@ -9,7 +11,14 @@ const Login = () => {
         const email = form.get('email');
         const password = form.get('password');
         console.log(email, password)
+        signIn(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
     }
+
+
 
     return (
         <div className="flex justify-center items-center h-[85vh] px-2">

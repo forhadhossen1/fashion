@@ -2,8 +2,10 @@ import { useFormik } from "formik";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import * as Yup from 'yup';
+import useAuth from "../../Hooks/useAuth";
 
 const SignUp = () => {
+    const { createUser } = useAuth();
     const formik = useFormik({
         initialValues: {
             name: '',
@@ -21,9 +23,14 @@ const SignUp = () => {
                 .required('')
         }),
 
-        onSubmit: values => {
+        onSubmit: data => {
             // alert(JSON.stringify(values, null, 2));
-            console.log(values)
+            console.log(data)
+            createUser(data.email, data.password)
+                .then(result => {
+                    const loggedUser = result.user;
+                    console.log(loggedUser);
+                })
         },
     });
     return (
