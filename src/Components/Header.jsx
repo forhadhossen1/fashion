@@ -1,7 +1,21 @@
 import { Avatar, Dropdown, Navbar } from "flowbite-react";
 import { Link } from "react-router-dom";
+import useAuth from "../Hooks/useAuth";
 
 const Header = () => {
+  const { user, logOut, loading } = useAuth();
+
+  if (loading) {
+    return <div style={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      height: '100vh',
+    }}>
+      <div className="w-24 h-24 border-4 border-dashed rounded-full animate-spin dark:border-violet-400 flex justify-center items-center"></div>
+    </div>
+  }
+
   return (
     <div className="">
       <Navbar fluid rounded>
