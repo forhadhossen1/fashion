@@ -142,7 +142,7 @@
     {
       "_id": "15",
       "title": "Product 15",
-      "image": "https://i.ibb.co/VCjc1xV/About-Story.jpg",
+      "image": "https://i.ibb.co/Drr7GBJ/forhad-2.jpg",
       "offerPercentage": 30,
       "price": 190,
       "offerPrice": 133,
@@ -152,7 +152,7 @@
     {
       "_id": "16",
       "title": "Product 16",
-      "image": "https://i.ibb.co/VCjc1xV/About-Story.jpg",
+      "image": "https://i.ibb.co/Drr7GBJ/forhad-2.jpg",
       "offerPercentage": 25,
       "price": 200,
       "offerPrice": 150,
@@ -162,7 +162,7 @@
     {
       "_id": "17",
       "title": "Product 17",
-      "image": "https://i.ibb.co/VCjc1xV/About-Story.jpg",
+      "image": "https://i.ibb.co/Drr7GBJ/forhad-2.jpg",
       "offerPercentage": 10,
       "price": 210,
       "offerPrice": 189,
@@ -182,7 +182,7 @@
     {
       "_id": "19",
       "title": "Product 19",
-      "image": "https://i.ibb.co/VCjc1xV/About-Story.jpg",
+      "image": "https://i.ibb.co/TL9zPKG/Education-Copy.png",
       "offerPercentage": 20,
       "price": 230,
       "offerPrice": 184,

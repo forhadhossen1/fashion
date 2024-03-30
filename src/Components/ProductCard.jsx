@@ -3,9 +3,9 @@ const ProductCard = ({ product }) => {
     const { image, offerPercentage, price, offerPrice, title } = product || {}
     return (
         <div>
-            <section className="mx-auto w-fit p-12">
+            <section className="mx-auto w-fit p-3">
                 {/* <!-- Card --> */}
-                <div className="w-72 h-fit group">
+                <div className="w-72 md:w-80 lg:w-96 h-fit group">
                     <div className="relative overflow-hidden">
                         <img className="h-96 w-full object-cover" src={image} alt="product image" />
 
