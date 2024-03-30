@@ -1,19 +1,24 @@
-import { useEffect, useState } from 'react';
+
 import trendFashion from '../../assets/Banner/FashionTrends.png'
 import newBanner from '../../assets/Banner/add1.jpg'
 import shopBanner from '../../assets/Banner/shop.jpg'
 import ProductCard from '../ProductCard';
+import useProduct from '../../Hooks/useProduct';
 const TrendFashion = () => {
-    const [products, setProducts] = useState([]);
 
-    useEffect(() => {
-        fetch('product.json')
-            .then(res => res.json())
-            .then(data => {
-                const fashionTrend = data.filter(product => product.category === 'trend-fashion');
-                setProducts(fashionTrend)
-            })
-    }, [])
+    const [product] = useProduct();
+    const products = product.filter(product => product.category === 'trend-fashion')
+    
+    // const [products, setProducts] = useState([]);
+
+    // useEffect(() => {
+    //     fetch('product.json')
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             const fashionTrend = data.filter(product => product.category === 'trend-fashion');
+    //             setProducts(fashionTrend)
+    //         })
+    // }, [])
     return (
         <div className='my-12'>
             <div className='pt-12'>

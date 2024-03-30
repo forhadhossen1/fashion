@@ -1,18 +1,23 @@
-import { useEffect, useState } from "react";
+
 import newBanner from '../../assets/Banner/newBanner.jpg'
 import ProductCard from "../ProductCard";
+import useProduct from "../../Hooks/useProduct";
 
 const New = () => {
-    const [products, setProducts] = useState([]);
 
-    useEffect(() => {
-        fetch('product.json')
-            .then(res => res.json())
-            .then(data => {
-                const newFashion = data.filter(product => product.category === 'new');
-                setProducts(newFashion)
-            })
-    }, [])
+    const [product] = useProduct();
+    const products = product.filter(product => product.category === 'new')
+
+    // const [products, setProducts] = useState([]);
+
+    // useEffect(() => {
+    //     fetch('product.json')
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             const newFashion = data.filter(product => product.category === 'new');
+    //             setProducts(newFashion)
+    //         })
+    // }, [])
     return (
         <div className='my-12'>
             <div className='pt-12'>
