@@ -1,6 +1,7 @@
 import { Avatar, Dropdown, Navbar } from "flowbite-react";
 import { Link } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
+import { FaCreditCard, FaHeart } from "react-icons/fa6";
 
 const Header = () => {
   const { user, logOut, loading } = useAuth();
@@ -31,7 +32,7 @@ const Header = () => {
           <h2 className="text-3xl font-bold "><span className="text-4xl text-purple-700">F</span>ashion</h2>
         </Navbar.Brand>
 
- 
+
 
 
         <Navbar.Collapse>
@@ -47,6 +48,24 @@ const Header = () => {
           <Navbar>
             <Link to='/Kids'>Kids</Link>
           </Navbar>
+
+          <div className="dropdown dropdown-end">
+            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+              <div className="indicator">
+                <FaCreditCard  className="text-xl"/>
+                <span className="badge badge-sm indicator-item">8</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="dropdown dropdown-end">
+            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+              <div className="indicator">
+                <FaHeart className="text-xl text-red-600"/>
+                <span className="badge badge-sm indicator-item">8</span>
+              </div>
+            </div>
+          </div>
         </Navbar.Collapse>
 
         {
