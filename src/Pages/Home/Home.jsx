@@ -1,10 +1,10 @@
 import FooterComponent from "../../Components/FooterComponent";
+import Banner from "../../Components/HomeComponents/Banner";
 
 const Home = () => {
     return (
         <div>
-            <p className="py-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet ipsam labore commodi officiis quidem doloremque nisi provident quis eos doloribus. Voluptatibus mollitia facilis quas cum sapiente soluta, porro officiis tempore.
-            </p>
+            <Banner />
             <FooterComponent />
         </div>
     );
