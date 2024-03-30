@@ -9,8 +9,8 @@ const New = () => {
         fetch('product.json')
             .then(res => res.json())
             .then(data => {
-                const fashionTrend = data.filter(product => product.category === 'new');
-                setProducts(fashionTrend)
+                const newFashion = data.filter(product => product.category === 'new');
+                setProducts(newFashion)
             })
     }, [])
     return (
