@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const useBanner = () => {
-    const [banner, setBanner] = useState([]);
+    const [banners, setBanner] = useState([]);
     const [loading, setLoading] = useState([true]);
 
     fetch('banner.json')
@@ -11,7 +11,7 @@ const useBanner = () => {
             setLoading(false);
         })
 
-    return [banner, loading]
+    return [banners, loading]
 };
 
 export default useBanner;
