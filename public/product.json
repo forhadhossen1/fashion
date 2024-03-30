@@ -1,0 +1,182 @@
+[
+    {
+        "_id": "1",
+        "image": "https://example.com/image1.jpg",
+        "offerPercentage": 20,
+        "price": 50,
+        "offerPrice": 40,
+        "category": "best-sale",
+        "type": "men"
+    },
+    {
+        "_id": "2",
+        "image": "https://example.com/image2.jpg",
+        "offerPercentage": 15,
+        "price": 60,
+        "offerPrice": 51,
+        "category": "trend-fashion",
+        "type": "women"
+    },
+    {
+        "_id": "3",
+        "image": "https://example.com/image3.jpg",
+        "offerPercentage": 30,
+        "price": 70,
+        "offerPrice": 49,
+        "category": "best-sale",
+        "type": "kids"
+    },
+    {
+        "_id": "4",
+        "image": "https://example.com/image4.jpg",
+        "offerPercentage": 25,
+        "price": 80,
+        "offerPrice": 60,
+        "category": "trend-fashion",
+        "type": "men"
+    },
+    {
+        "_id": "5",
+        "image": "https://example.com/image5.jpg",
+        "offerPercentage": 10,
+        "price": 90,
+        "offerPrice": 81,
+        "category": "best-sale",
+        "type": "women"
+    },
+    {
+        "_id": "6",
+        "image": "https://example.com/image6.jpg",
+        "offerPercentage": 35,
+        "price": 100,
+        "offerPrice": 65,
+        "category": "trend-fashion",
+        "type": "kids"
+    },
+    {
+        "_id": "7",
+        "image": "https://example.com/image7.jpg",
+        "offerPercentage": 20,
+        "price": 110,
+        "offerPrice": 88,
+        "category": "best-sale",
+        "type": "men"
+    },
+    {
+        "_id": "8",
+        "image": "https://example.com/image8.jpg",
+        "offerPercentage": 15,
+        "price": 120,
+        "offerPrice": 102,
+        "category": "trend-fashion",
+        "type": "women"
+    },
+    {
+        "_id": "9",
+        "image": "https://example.com/image9.jpg",
+        "offerPercentage": 30,
+        "price": 130,
+        "offerPrice": 91,
+        "category": "best-sale",
+        "type": "kids"
+    },
+    {
+        "_id": "10",
+        "image": "https://example.com/image10.jpg",
+        "offerPercentage": 25,
+        "price": 140,
+        "offerPrice": 105,
+        "category": "trend-fashion",
+        "type": "men"
+    },
+    {
+        "_id": "11",
+        "image": "https://example.com/image11.jpg",
+        "offerPercentage": 10,
+        "price": 150,
+        "offerPrice": 135,
+        "category": "best-sale",
+        "type": "women"
+    },
+    {
+        "_id": "12",
+        "image": "https://example.com/image12.jpg",
+        "offerPercentage": 35,
+        "price": 160,
+        "offerPrice": 104,
+        "category": "trend-fashion",
+        "type": "kids"
+    },
+    {
+        "_id": "13",
+        "image": "https://example.com/image13.jpg",
+        "offerPercentage": 20,
+        "price": 170,
+        "offerPrice": 136,
+        "category": "best-sale",
+        "type": "men"
+    },
+    {
+        "_id": "14",
+        "image": "https://example.com/image14.jpg",
+        "offerPercentage": 15,
+        "price": 180,
+        "offerPrice": 153,
+        "category": "trend-fashion",
+        "type": "women"
+    },
+    {
+        "_id": "15",
+        "image": "https://example.com/image15.jpg",
+        "offerPercentage": 30,
+        "price": 190,
+        "offerPrice": 133,
+        "category": "best-sale",
+        "type": "kids"
+    },
+    {
+        "_id": "16",
+        "image": "https://example.com/image16.jpg",
+        "offerPercentage": 25,
+        "price": 200,
+        "offerPrice": 150,
+        "category": "trend-fashion",
+        "type": "men"
+    },
+    {
+        "_id": "17",
+        "image": "https://example.com/image17.jpg",
+        "offerPercentage": 10,
+        "price": 210,
+        "offerPrice": 189,
+        "category": "best-sale",
+        "type": "women"
+    },
+    {
+        "_id": "18",
+        "image": "https://example.com/image18.jpg",
+        "offerPercentage": 35,
+        "price": 220,
+        "offerPrice": 143,
+        "category": "trend-fashion",
+        "type": "kids"
+    },
+    {
+        "_id": "19",
+        "image": "https://example.com/image19.jpg",
+        "offerPercentage": 20,
+        "price": 230,
+        "offerPrice": 184,
+        "category": "best-sale",
+        "type": "men"
+    },
+    {
+        "_id": "20",
+        "image": "https://example.com/image20.jpg",
+        "offerPercentage": 15,
+        "price": 240,
+        "offerPrice": 204,
+        "category": "trend-fashion",
+        "type": "women"
+    }
+]
