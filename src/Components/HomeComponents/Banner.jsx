@@ -9,7 +9,7 @@ const Banner = () => {
     const [banners] = useBanner();
 
     return (
-        <div>
+        <div className="">
             <Swiper
                 spaceBetween={30}
                 centeredSlides={true}
@@ -29,6 +29,7 @@ const Banner = () => {
                         <SwiperSlide key={banner._id}
                             banner={banner}
                         >
+                            <img src={banner.image_url} alt="banner image" className="h-[50vh] md:h-[80vh] w-full "/>
 
                         </SwiperSlide>
                     ))
