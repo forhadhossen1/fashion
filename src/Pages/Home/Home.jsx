@@ -1,5 +1,4 @@
 
-import FooterComponent from "../../Components/FooterComponent";
 import Banner from "../../Components/HomeComponents/Banner";
 import BestSale from "../../Components/HomeComponents/BestSale";
 import New from "../../Components/HomeComponents/New";
@@ -12,7 +11,6 @@ const Home = () => {
             <BestSale />
             <New/>
             <TrendFashion/>
-            <FooterComponent />
         </div>
     );
 };
