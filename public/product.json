@@ -146,7 +146,7 @@
       "offerPercentage": 30,
       "price": 190,
       "offerPrice": 133,
-      "category": "best-sale",
+      "category": "new",
       "type": "kids"
     },
     {
@@ -176,7 +176,7 @@
       "offerPercentage": 35,
       "price": 220,
       "offerPrice": 143,
-      "category": "trend-fashion",
+      "category": "new",
       "type": "kids"
     },
     {
@@ -186,7 +186,7 @@
       "offerPercentage": 20,
       "price": 230,
       "offerPrice": 184,
-      "category": "best-sale",
+      "category": "new",
       "type": "men"
     },
     {
