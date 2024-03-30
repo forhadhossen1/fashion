@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import trendFashion from '../../assets/Banner/FashionTrends.png'
+import newBanner from '../../assets/Banner/add1.jpg'
+import shopBanner from '../../assets/Banner/shop.jpg'
 import ProductCard from '../ProductCard';
 const TrendFashion = () => {
     const [products, setProducts] = useState([]);
@@ -15,9 +17,9 @@ const TrendFashion = () => {
     return (
         <div className='my-12'>
             <div className='pt-12'>
-                <img src={trendFashion} className='w-full md:h-[70vh]' alt="banner" />
+                <img src={trendFashion} className='w-full md:h-[70vh] rounded-lg' alt="banner" />
             </div>
-            <div className="my-12 w-96 pt-12 mx-auto">
+            <div className="my-12 md:w-96 pt-12 mx-auto">
                 <h1 className="text-gray-800 font-bold text-4xl border-b-4 p-3 border-black text-center">Fashion Trends </h1>
             </div>
             
@@ -29,6 +31,10 @@ const TrendFashion = () => {
                     />)
                 }
             </div>
+<div className='grid grid-cols-1 md:grid-cols-2 my-12'>
+    <img src={newBanner} alt="" className='rounded-l-lg' />
+    <img src={shopBanner} alt="" className='rounded-r-lg' />
+</div>
         </div>
     );
 };
