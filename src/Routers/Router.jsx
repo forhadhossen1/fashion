@@ -4,7 +4,7 @@ import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
-import Man from "../Pages/Man/Man";
+import Men from "../Pages/Men/Men";
 import Women from "../Pages/Woman/Women";
 import Kids from "../Pages/Kids/Kids";
 
@@ -19,8 +19,8 @@ const router = createBrowserRouter([
                 element: <Home></Home>
             },
             {
-                path: '/man',
-                element: <Man></Man>
+                path: '/men',
+                element: <Men></Men>
             },
             {
                 path: '/women',

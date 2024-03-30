@@ -40,7 +40,7 @@ const Header = () => {
             <Link to='/'>Home</Link>
           </Navbar>
           <Navbar>
-            <Link to='/man'>Man</Link>
+            <Link to='/men'>Men</Link>
           </Navbar>
           <Navbar>
             <Link to='/women'>Women</Link>

@@ -1,14 +1,14 @@
 import { Helmet } from "react-helmet-async";
 
-const Man = () => {
+const Men = () => {
     return (
         <div>
-               <Helmet>
-                <title>Fashion | Man</title>
+            <Helmet>
+                <title>Fashion | Men</title>
             </Helmet>
             yesh man coth page
         </div>
     );
 };
 
-export default Man;
+export default Men;
