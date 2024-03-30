@@ -1,6 +1,6 @@
 
 const ProductCard = ({ product }) => {
-    const { image, offerpercentage, price, offerPrice, title } = product || {}
+    const { image, offerPercentage, price, offerPrice, title } = product || {}
     return (
         <div>
             <section className="mx-auto w-fit p-12">
@@ -8,20 +8,26 @@ const ProductCard = ({ product }) => {
                 <div className="w-72 h-fit group">
                     <div className="relative overflow-hidden">
                         <img className="h-96 w-full object-cover" src={image} alt="product image" />
-                        <div className="absolute bg-white mt-0 p-2">{offerpercentage}%</div>
-                        <div className="flex">
-                            <div className="absolute left-0 bottom-0 bg-black/20 flex items-center justify-center group-hover:opacity-100 transition-all duration-300">
+
+
+
+                        <div className="absolute h-full w-full bg-black/20 flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                            <div className="flex flex-col gap-2">
                                 <button className="bg-black text-white py-2 px-5">Add to cart</button>
-                            </div>
-                            <div className="absolute right-0 bottom-0 bg-black/20 flex items-center justify-center group-hover:opacity-100 transition-all duration-300">
-                                <button className="bg-black text-white py-2 px-5">Add to favourite</button>
+                                <button className="bg-black text-white py-2 px-5">Add to Favourite</button>
                             </div>
                         </div>
-                        </div>
+                        <div className="absolute bg-white text-gray-900 top-1 right-1 p-2">{offerPercentage}% off</div>
+
                     </div>
-                    <h2 className="mt-3 text-xl capitalize">{title}</h2>
-                    <del className="text-red-700 text-lg">${price}</del>
-                    <p className="text-xl mt-2 ml-1 inline-block">${offerPrice}</p>
+
+
+                </div>
+                <h2 className="mt-3 text-xl capitalize">{title}</h2>
+                <div className="flex justify-between items-center">
+                    <del className="text-red-700 text-lg">Price : ${price}</del>
+                    <p className="text-xl mt-2 ml-1 inline-block">Price : ${offerPrice}</p>
+                </div>
             </section>
         </div>
     );
