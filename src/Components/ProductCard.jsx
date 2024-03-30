@@ -1,16 +1,5 @@
-import { useEffect, useState } from "react";
 
-const BestSale = () => {
-    const [products, setProducts] = useState([]);
-
-    useEffect(() => {
-        fetch('product.json')
-            .then(res => res.json())
-            .then(data => {
-                const bestSale = data.filter(product => product.category === 'best-sale');
-                setProducts(bestSale)
-            })
-    }, [])
+const ProductCard = () => {
     return (
         <div>
             <section className="mx-auto w-fit p-12">
@@ -31,4 +20,4 @@ const BestSale = () => {
     );
 };
 
-export default BestSale;
+export default ProductCard;
