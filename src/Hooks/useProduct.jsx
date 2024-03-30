@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const useProduct = () => {
-    const [products, setProducts] = useState([]);
+    const [product, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -12,7 +12,7 @@ const useProduct = () => {
                 setLoading(false)
             })
     }, [])
-    return [products, loading]
+    return [product, loading]
 };
 
 export default useProduct;
