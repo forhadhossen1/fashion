@@ -4,7 +4,7 @@ const useBanner = () => {
     const [banners, setBanner] = useState([]);
     const [loading, setLoading] = useState([true]);
 
-    fetch('banner.json')
+    fetch('http://localhost:5000/banner')
         .then(res => res.json())
         .then(data => {
             setBanner(data);

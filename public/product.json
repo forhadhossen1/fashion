@@ -1,6 +1,5 @@
 [
     {
-      "_id": "1",
       "title": "Product 1",
       "image": "https://i.ibb.co/VCjc1xV/About-Story.jpg",
       "offerPercentage": 20,
@@ -10,7 +9,6 @@
       "type": "men"
     },
     {
-      "_id": "2",
       "title": "Product 2",
       "image": "https://i.ibb.co/VCjc1xV/About-Story.jpg",
       "offerPercentage": 15,
@@ -20,7 +18,6 @@
       "type": "women"
     },
     {
-      "_id": "3",
       "title": "Product 3",
       "image": "https://i.ibb.co/VCjc1xV/About-Story.jpg",
       "offerPercentage": 30,
@@ -30,7 +27,6 @@
       "type": "kids"
     },
     {
-      "_id": "4",
       "title": "Product 4",
       "image": "https://i.ibb.co/VCjc1xV/About-Story.jpg",
       "offerPercentage": 25,
@@ -40,7 +36,6 @@
       "type": "men"
     },
     {
-      "_id": "5",
       "title": "Product 5",
       "image": "https://i.ibb.co/VCjc1xV/About-Story.jpg",
       "offerPercentage": 10,
@@ -50,7 +45,6 @@
       "type": "women"
     },
     {
-      "_id": "6",
       "title": "Product 6",
       "image": "https://i.ibb.co/VCjc1xV/About-Story.jpg",
       "offerPercentage": 35,
@@ -60,7 +54,6 @@
       "type": "kids"
     },
     {
-      "_id": "7",
       "title": "Product 7",
       "image": "https://i.ibb.co/VCjc1xV/About-Story.jpg",
       "offerPercentage": 20,
@@ -70,7 +63,6 @@
       "type": "men"
     },
     {
-      "_id": "8",
       "title": "Product 8",
       "image": "https://i.ibb.co/VCjc1xV/About-Story.jpg",
       "offerPercentage": 15,
@@ -80,7 +72,6 @@
       "type": "women"
     },
     {
-      "_id": "9",
       "title": "Product 9",
       "image": "https://i.ibb.co/VCjc1xV/About-Story.jpg",
       "offerPercentage": 30,
@@ -90,7 +81,6 @@
       "type": "kids"
     },
     {
-      "_id": "10",
       "title": "Product 10",
       "image": "https://i.ibb.co/VCjc1xV/About-Story.jpg",
       "offerPercentage": 25,
@@ -100,7 +90,6 @@
       "type": "men"
     },
     {
-      "_id": "11",
       "title": "Product 11",
       "image": "https://i.ibb.co/VCjc1xV/About-Story.jpg",
       "offerPercentage": 10,
@@ -110,7 +99,6 @@
       "type": "women"
     },
     {
-      "_id": "12",
       "title": "Product 12",
       "image": "https://i.ibb.co/VCjc1xV/About-Story.jpg",
       "offerPercentage": 35,
@@ -120,7 +108,6 @@
       "type": "kids"
     },
     {
-      "_id": "13",
       "title": "Product 13",
       "image": "https://i.ibb.co/VCjc1xV/About-Story.jpg",
       "offerPercentage": 20,
@@ -130,7 +117,6 @@
       "type": "men"
     },
     {
-      "_id": "14",
       "title": "Product 14",
       "image": "https://i.ibb.co/VCjc1xV/About-Story.jpg",
       "offerPercentage": 15,
@@ -140,7 +126,6 @@
       "type": "women"
     },
     {
-      "_id": "15",
       "title": "Product 15",
       "image": "https://i.ibb.co/Drr7GBJ/forhad-2.jpg",
       "offerPercentage": 30,
@@ -150,7 +135,6 @@
       "type": "kids"
     },
     {
-      "_id": "16",
       "title": "Product 16",
       "image": "https://i.ibb.co/Drr7GBJ/forhad-2.jpg",
       "offerPercentage": 25,
@@ -160,7 +144,6 @@
       "type": "men"
     },
     {
-      "_id": "17",
       "title": "Product 17",
       "image": "https://i.ibb.co/Drr7GBJ/forhad-2.jpg",
       "offerPercentage": 10,
@@ -170,7 +153,6 @@
       "type": "women"
     },
     {
-      "_id": "18",
       "title": "Product 18",
       "image": "https://i.ibb.co/VCjc1xV/About-Story.jpg",
       "offerPercentage": 35,
@@ -180,7 +162,6 @@
       "type": "kids"
     },
     {
-      "_id": "19",
       "title": "Product 19",
       "image": "https://i.ibb.co/TL9zPKG/Education-Copy.png",
       "offerPercentage": 20,
@@ -190,7 +171,6 @@
       "type": "men"
     },
     {
-      "_id": "20",
       "title": "Product 20",
       "image": "https://i.ibb.co/VCjc1xV/About-Story.jpg",
       "offerPercentage": 15,
