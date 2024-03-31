@@ -19,7 +19,7 @@ const Login = () => {
                 const user = result.user;
                 console.log(user);
                 Swal.fire({
-                    position: "middle",
+                    position: "center",
                     icon: "success",
                     title: "Login success",
                     showConfirmButton: false,

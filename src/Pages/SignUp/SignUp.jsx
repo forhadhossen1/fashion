@@ -1,11 +1,15 @@
-import { useFormik } from "formik";
+import { useFormik} from "formik";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import * as Yup from 'yup';
 import useAuth from "../../Hooks/useAuth";
+import Swal from "sweetalert2";
 
 const SignUp = () => {
-    const { createUser } = useAuth();
+    const { createUser, updateUserProfile } = useAuth();
+    // const navigate = useNavigate();
+
+
     const formik = useFormik({
         initialValues: {
             name: '',
@@ -30,7 +34,22 @@ const SignUp = () => {
                 .then(result => {
                     const loggedUser = result.user;
                     console.log(loggedUser);
+                    updateUserProfile(data.name, data?.photoUrl)
+                        .then(() => {
+                            console.log('user profile info update')
+                            formik.resetForm();
+
+                            Swal.fire({
+                                position: "center",
+                                icon: "success",
+                                title: "User create success",
+                                showConfirmButton: false,
+                                timer: 1000
+                            });
+                        })
+                        .catch(error => console.log(error))
                 })
+
         },
     });
     return (

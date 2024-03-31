@@ -20,8 +20,12 @@ const Header = () => {
 
   const handleLogOut = () => {
     logOut()
-      .then(result => { console.log(result) })
-      .catch(error => { console.log(error) })
+      .then(result => {
+        console.log(result)
+      })
+      .catch(error => {
+        console.log(error)
+      })
   }
 
 
@@ -52,7 +56,7 @@ const Header = () => {
           <div className="dropdown dropdown-end">
             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
               <div className="indicator">
-                <FaCreditCard  className="text-xl"/>
+                <FaCreditCard className="text-xl" />
                 <span className="badge badge-sm indicator-item">8</span>
               </div>
             </div>
@@ -61,7 +65,7 @@ const Header = () => {
           <div className="dropdown dropdown-end">
             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
               <div className="indicator">
-                <FaHeart className="text-xl text-red-600"/>
+                <FaHeart className="text-xl text-red-600" />
                 <span className="badge badge-sm indicator-item">8</span>
               </div>
             </div>
