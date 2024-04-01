@@ -3,13 +3,21 @@ import useAuth from "../Hooks/useAuth";
 import Swal from "sweetalert2";
 
 const ProductCard = ({ product }) => {
-    const { image, offerPercentage, price, offerPrice, title } = product || {}
+    const { image, offerPercentage, price, offerPrice, title, _id } = product || {}
     const { user } = useAuth();
     const navigate = useNavigate();
 
     const handleAddtoCart = colth => {
         if (user && user.email) {
             //  todo : sent cart product
+            console.log(user.email, colth)
+            const productItem = {
+                productId: _id,
+                email: user.email,
+                title,
+                image,
+                offerPrice
+            }
         } else {
             Swal.fire({
                 title: "You are not Logged In",
