@@ -2,9 +2,12 @@ import { Avatar, Dropdown, Navbar } from "flowbite-react";
 import { Link } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 import { FaCreditCard, FaHeart } from "react-icons/fa6";
+import useCart from "../Hooks/useCart";
 
 const Header = () => {
   const { user, logOut, loading } = useAuth();
+  const [cart] = useCart();
+
 
   if (loading) {
     return <div style={{
@@ -56,7 +59,7 @@ const Header = () => {
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
             <div className="indicator">
               <FaCreditCard className="text-xl" />
-              <span className="badge badge-sm indicator-item">+0</span>
+              <span className="badge badge-sm indicator-item">{cart.length}</span>
             </div>
           </div>
 
