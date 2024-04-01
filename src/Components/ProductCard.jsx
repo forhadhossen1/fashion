@@ -9,7 +9,7 @@ const ProductCard = ({ product }) => {
     const { user } = useAuth();
     const navigate = useNavigate();
     const axiosSecure = useAxiosSecure();
-    const [refetch] = useCart();
+    const [, refetch] = useCart();
 
     const handleAddtoCart = () => {
         if (user && user.email) {
