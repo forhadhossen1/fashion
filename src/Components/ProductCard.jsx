@@ -2,17 +2,19 @@ import { useNavigate } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../Hooks/useAxiosSecure";
+import useCart from "../Hooks/useCart";
 
 const ProductCard = ({ product }) => {
     const { image, offerPercentage, price, offerPrice, title, _id } = product || {}
     const { user } = useAuth();
     const navigate = useNavigate();
     const axiosSecure = useAxiosSecure();
+    const [refetch] = useCart();
 
-    const handleAddtoCart = colth => {
+    const handleAddtoCart = () => {
         if (user && user.email) {
             //  todo : sent cart product
-            console.log(user.email, colth)
+            // console.log(user.email, colth)
             const productItem = {
                 productId: _id,
                 email: user.email,
@@ -31,6 +33,9 @@ const ProductCard = ({ product }) => {
                             showConfirmButton: false,
                             timer: 1000
                         });
+
+                        // refetch cart to update the cart product
+                        refetch();
                     }
                 })
 
