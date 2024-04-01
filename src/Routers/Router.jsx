@@ -7,6 +7,8 @@ import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Men from "../Pages/Men/Men";
 import Women from "../Pages/Woman/Women";
 import Kids from "../Pages/Kids/Kids";
+import Dashboard from "../Layouts/Dashboard";
+import AddedProduct from "../DashboardPage/UserDashboard/AddedProduct";
 
 const router = createBrowserRouter([
     {
@@ -37,10 +39,21 @@ const router = createBrowserRouter([
             {
                 path: '/signUp',
                 element: <SignUp></SignUp>
-            }
+            },
+
         ]
 
     },
+    {
+        path: '/dashboard',
+        element: <Dashboard />,
+        children: [
+            {
+                path: 'addedProduct',
+                element: <AddedProduct/>
+            }
+        ]
+    }
 ]);
 
 export default router;
