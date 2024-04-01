@@ -1,6 +1,9 @@
 
 const ProductCard = ({ product }) => {
     const { image, offerPercentage, price, offerPrice, title } = product || {}
+    const handleAddtoCart = colth => {
+        console.log(colth)
+    }
     return (
         <div>
             <section className="mx-auto w-fit p-3">
@@ -13,7 +16,9 @@ const ProductCard = ({ product }) => {
 
                         <div className="absolute h-full w-full bg-black/20 flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
                             <div className="flex flex-col gap-2">
-                                <button className="bg-black text-white py-2 px-5">Add to cart</button>
+                                <button
+                                    onClick={() => handleAddtoCart(product)}
+                                    className="bg-black text-white py-2 px-5">Add to cart</button>
                                 <button className="bg-black text-white py-2 px-5">Add to Favourite</button>
                             </div>
                         </div>

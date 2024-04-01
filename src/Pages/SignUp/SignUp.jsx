@@ -1,4 +1,4 @@
-import { useFormik} from "formik";
+import { useFormik } from "formik";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useNavigate } from "react-router-dom";
 import * as Yup from 'yup';
@@ -7,7 +7,7 @@ import Swal from "sweetalert2";
 
 const SignUp = () => {
     const { createUser, updateUserProfile } = useAuth();
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
 
     const formik = useFormik({
@@ -46,6 +46,7 @@ const SignUp = () => {
                                 showConfirmButton: false,
                                 timer: 1000
                             });
+                            navigate('/')
                         })
                         .catch(error => console.log(error))
                 })

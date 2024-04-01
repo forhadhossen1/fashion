@@ -53,23 +53,20 @@ const Header = () => {
             <Link to='/Kids'>Kids</Link>
           </Navbar>
 
-          <div className="dropdown dropdown-end">
-            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
-              <div className="indicator">
-                <FaCreditCard className="text-xl" />
-                <span className="badge badge-sm indicator-item">8</span>
-              </div>
+          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+            <div className="indicator">
+              <FaCreditCard className="text-xl" />
+              <span className="badge badge-sm indicator-item">+0</span>
             </div>
           </div>
 
-          <div className="dropdown dropdown-end">
-            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
-              <div className="indicator">
-                <FaHeart className="text-xl text-red-600" />
-                <span className="badge badge-sm indicator-item">8</span>
-              </div>
+          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+            <div className="indicator">
+              <FaHeart className="text-xl text-red-600" />
+              <span className="badge badge-sm indicator-item">+0</span>
             </div>
           </div>
+
         </Navbar.Collapse>
 
         {
