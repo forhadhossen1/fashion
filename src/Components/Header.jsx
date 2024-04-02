@@ -1,15 +1,12 @@
 import { Avatar, Dropdown, Navbar } from "flowbite-react";
 import { Link } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
-import { FaCreditCard, FaHeart } from "react-icons/fa6";
+import { FaCreditCard } from "react-icons/fa6";
 import useCart from "../Hooks/useCart";
-import useFav from "../Hooks/useFav";
 
 const Header = () => {
   const { user, logOut, loading } = useAuth();
   const [cart] = useCart();
-  const [fav] = useFav();
-
 
   if (loading) {
     return <div style={{
