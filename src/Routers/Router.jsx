@@ -9,6 +9,7 @@ import Women from "../Pages/Woman/Women";
 import Kids from "../Pages/Kids/Kids";
 import Dashboard from "../Layouts/Dashboard";
 import AddedProduct from "../DashboardPage/UserDashboard/AddedProduct";
+import UserPanel from "../DashboardPage/UserDashboard/UserPanel";
 
 const router = createBrowserRouter([
     {
@@ -48,10 +49,16 @@ const router = createBrowserRouter([
         path: '/dashboard',
         element: <Dashboard />,
         children: [
+
+            {
+                path: 'userPanel',
+                element: <UserPanel />
+            },
             {
                 path: 'addedProduct',
-                element: <AddedProduct/>
-            }
+                element: <AddedProduct />
+            },
+
         ]
     }
 ]);

@@ -56,12 +56,14 @@ const Header = () => {
             <Link to='/Kids'>Kids</Link>
           </Navbar>
 
-          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
-            <div className="indicator">
-              <FaCreditCard className="text-xl" />
-              <span className="badge badge-sm indicator-item">{cart.length}</span>
+          <Link to='/dashboard/addedProduct'>
+            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+              <div className="indicator">
+                <FaCreditCard className="text-xl" />
+                <span className="badge badge-sm indicator-item">{cart.length}</span>
+              </div>
             </div>
-          </div>
+          </Link>
 
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
             <div className="indicator">
@@ -86,7 +88,7 @@ const Header = () => {
                   <span className="block text-sm">{user?.displayName}</span>
                   <span className="block truncate text-sm font-medium">{user?.email}</span>
                 </Dropdown.Header>
-                <Link to='/dashboard'>
+                <Link to='/dashboard/userPanel'>
                   <Dropdown.Item>Dashboard</Dropdown.Item>
                 </Link>
                 <Dropdown.Item>Settings</Dropdown.Item>
