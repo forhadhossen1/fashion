@@ -55,6 +55,49 @@ const ProductCard = ({ product }) => {
             });
         }
     }
+    const handleAddtoFav = () => {
+        if (user && user.email) {
+            const productItem = {
+                productId: _id,
+                email: user.email,
+                title,
+                image,
+                offerPrice
+            }
+
+            axiosSecure.post('/favourite', productItem)
+                .then(res => {
+                    if (res.data.insertedId) {
+                        Swal.fire({
+                            position: "center",
+                            icon: "success",
+                            title: `${title} Added to the favourite `,
+                            showConfirmButton: false,
+                            timer: 1000
+                        });
+
+                        // refetch cart to update the cart product
+                        refetch();
+                    }
+                })
+        } else {
+            Swal.fire({
+                title: "You are not Logged In",
+                text: "Please login add to the favourite!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, Login"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    navigate('/login')
+                }
+            });
+        }
+    }
+
+
     return (
         <div>
             <section className="mx-auto w-fit p-3">
@@ -70,7 +113,9 @@ const ProductCard = ({ product }) => {
                                 <button
                                     onClick={() => handleAddtoCart(product)}
                                     className="bg-black text-white py-2 px-5">Add to cart</button>
-                                <button className="bg-black text-white py-2 px-5">Add to Favourite</button>
+                                <button
+                                    onClick={() => handleAddtoFav(product)}
+                                    className="bg-black text-white py-2 px-5">Add to Favourite</button>
                             </div>
                         </div>
                         <div className="absolute bg-white text-gray-900 top-1 right-1 p-2">{offerPercentage}% off</div>
