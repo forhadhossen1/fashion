@@ -10,6 +10,7 @@ import Kids from "../Pages/Kids/Kids";
 import Dashboard from "../Layouts/Dashboard";
 import AddedProduct from "../DashboardPage/UserDashboard/AddedProduct";
 import UserPanel from "../DashboardPage/UserDashboard/UserPanel";
+import FavouriteProduct from "../DashboardPage/UserDashboard/FavouriteProduct";
 
 const router = createBrowserRouter([
     {
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
             {
                 path: 'userPanel',
                 element: <UserPanel />
+            },
+            {
+                path: 'favProduct',
+                element: <FavouriteProduct />
             },
             {
                 path: 'addedProduct',

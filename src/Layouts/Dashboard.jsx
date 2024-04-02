@@ -16,7 +16,7 @@ const Dashboard = () => {
                                 </Sidebar.Item>
                             </Link>
                             
-                            <Link>
+                            <Link to='/dashboard/favProduct'>
                             <Sidebar.Item icon={HiHeart}>
                                 Favourite Product
                             </Sidebar.Item>
