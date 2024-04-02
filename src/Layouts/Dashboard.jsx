@@ -1,5 +1,5 @@
 import { Sidebar } from "flowbite-react";
-import { HiChartPie, HiHome, HiInbox, HiShoppingBag, HiUser, HiViewBoards } from "react-icons/hi";
+import { HiChartPie, HiHeart, HiHome, HiInbox, HiShoppingBag, HiUser, HiViewBoards } from "react-icons/hi";
 import { Link, Outlet } from "react-router-dom";
 
 const Dashboard = () => {
@@ -9,15 +9,20 @@ const Dashboard = () => {
                 <Sidebar aria-label="Sidebar with content separator example" className="h-[97vh] my-3">
                     <Sidebar.Items>
                         <Sidebar.ItemGroup>
+
                             <Link to='/dashboard/userPanel'>
                                 <Sidebar.Item icon={HiChartPie}>
                                     User Panel
                                 </Sidebar.Item>
                             </Link>
-                            <Sidebar.Item href="#" icon={HiViewBoards}>
-                                Kanban
+                            
+                            <Link>
+                            <Sidebar.Item icon={HiHeart}>
+                                Favourite Product
                             </Sidebar.Item>
-                            <Sidebar.Item href="#" icon={HiInbox}>
+                            </Link>
+
+                            <Sidebar.Item icon={HiInbox}>
                                 Inbox
                             </Sidebar.Item>
                             <Sidebar.Item href="#" icon={HiUser}>
