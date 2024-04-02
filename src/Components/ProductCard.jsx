@@ -3,6 +3,7 @@ import useAuth from "../Hooks/useAuth";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../Hooks/useAxiosSecure";
 import useCart from "../Hooks/useCart";
+import useFav from "../Hooks/useFav";
 
 const ProductCard = ({ product }) => {
     const { image, offerPercentage, price, offerPrice, title, _id } = product || {}
@@ -10,6 +11,7 @@ const ProductCard = ({ product }) => {
     const navigate = useNavigate();
     const axiosSecure = useAxiosSecure();
     const [, refetch] = useCart();
+    const [, favRefetch] = useFav();
 
     const handleAddtoCart = () => {
         if (user && user.email) {
@@ -77,7 +79,7 @@ const ProductCard = ({ product }) => {
                         });
 
                         // refetch cart to update the cart product
-                        refetch();
+                        favRefetch();
                     }
                 })
         } else {

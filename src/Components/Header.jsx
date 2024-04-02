@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 import { FaCreditCard, FaHeart } from "react-icons/fa6";
 import useCart from "../Hooks/useCart";
+import useFav from "../Hooks/useFav";
 
 const Header = () => {
   const { user, logOut, loading } = useAuth();
   const [cart] = useCart();
+  const [fav] = useFav();
 
 
   if (loading) {
@@ -60,7 +62,7 @@ const Header = () => {
             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
               <div className="indicator">
                 <FaCreditCard className="text-xl" />
-                <span className="badge badge-sm indicator-item">{cart.length}</span>
+                <span className="badge badge-sm indicator-item">+ {cart.length}</span>
               </div>
             </div>
           </Link>
@@ -68,7 +70,7 @@ const Header = () => {
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
             <div className="indicator">
               <FaHeart className="text-xl text-red-600" />
-              <span className="badge badge-sm indicator-item">+0</span>
+              <span className="badge badge-sm indicator-item">+ {fav.length}</span>
             </div>
           </div>
 

@@ -5,7 +5,7 @@ import useAxiosSecure from "./useAxiosSecure";
 const useFav = () => {
     const { user } = useAuth();
     const axiosSecure = useAxiosSecure();
-    const { data: fav = [], refetch } = useQuery({
+    const { data: fav = [], refetch: favRefetch } = useQuery({
         queryKey: ['fav', user?.email],
         queryFn: async () => {
             const res = await axiosSecure.get(`/favourite?email=${user?.email}`)
@@ -13,7 +13,7 @@ const useFav = () => {
         }
     })
 
-    return [fav, refetch];
+    return [fav, favRefetch];
 };
 
 export default useFav;
