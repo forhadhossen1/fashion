@@ -3,7 +3,6 @@ import useAuth from "../Hooks/useAuth";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../Hooks/useAxiosSecure";
 import useCart from "../Hooks/useCart";
-import useFav from "../Hooks/useFav";
 
 const ProductCard = ({ product }) => {
     const { image, offerPercentage, price, offerPrice, title, _id } = product || {}
@@ -11,7 +10,6 @@ const ProductCard = ({ product }) => {
     const navigate = useNavigate();
     const axiosSecure = useAxiosSecure();
     const [, refetch] = useCart();
-    const [, favRefetch] = useFav();
 
     const handleAddtoCart = () => {
         if (user && user.email) {
@@ -57,47 +55,6 @@ const ProductCard = ({ product }) => {
             });
         }
     }
-    const handleAddtoFav = () => {
-        if (user && user.email) {
-            const productItem = {
-                productId: _id,
-                email: user.email,
-                title,
-                image,
-                offerPrice
-            }
-
-            axiosSecure.post('/favourite', productItem)
-                .then(res => {
-                    if (res.data.insertedId) {
-                        Swal.fire({
-                            position: "center",
-                            icon: "success",
-                            title: `${title} Added to the favourite `,
-                            showConfirmButton: false,
-                            timer: 1000
-                        });
-
-                        // refetch cart to update the cart product
-                        favRefetch();
-                    }
-                })
-        } else {
-            Swal.fire({
-                title: "You are not Logged In",
-                text: "Please login add to the favourite!",
-                icon: "warning",
-                showCancelButton: true,
-                confirmButtonColor: "#3085d6",
-                cancelButtonColor: "#d33",
-                confirmButtonText: "Yes, Login"
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    navigate('/login')
-                }
-            });
-        }
-    }
 
 
     return (
@@ -111,14 +68,10 @@ const ProductCard = ({ product }) => {
 
 
                         <div className="absolute h-full w-full bg-black/20 flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                            <div className="flex flex-col gap-2">
-                                <button
-                                    onClick={() => handleAddtoCart(product)}
-                                    className="bg-black text-white py-2 px-5">Add to cart</button>
-                                <button
-                                    onClick={() => handleAddtoFav(product)}
-                                    className="bg-black text-white py-2 px-5">Add to Favourite</button>
-                            </div>
+                            <button
+                                onClick={() => handleAddtoCart(product)}
+                                className="bg-black text-white py-2 px-5">Add to cart
+                            </button>
                         </div>
                         <div className="absolute bg-white text-gray-900 top-1 right-1 p-2">{offerPercentage}% off</div>
 

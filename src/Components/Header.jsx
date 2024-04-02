@@ -41,9 +41,6 @@ const Header = () => {
           <h2 className="text-3xl font-bold "><span className="text-4xl text-purple-700">F</span>ashion</h2>
         </Navbar.Brand>
 
-
-
-
         <Navbar.Collapse>
           <Navbar active>
             <Link to='/'>Home</Link>
@@ -66,14 +63,6 @@ const Header = () => {
               </div>
             </div>
           </Link>
-
-          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
-            <div className="indicator">
-              <FaHeart className="text-xl text-red-600" />
-              <span className="badge badge-sm indicator-item">+ {fav.length}</span>
-            </div>
-          </div>
-
         </Navbar.Collapse>
 
         {
