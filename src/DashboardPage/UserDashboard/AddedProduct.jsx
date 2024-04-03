@@ -29,7 +29,13 @@ const AddedProduct = () => {
                         <Table.Body className="divide-y">
                             {
                                 cart.map(product => <Table.Row key={product._id} className="bg-white dark:border-gray-700 dark:bg-gray-800">
-                                    <Table.Cell>product image</Table.Cell>
+                                    <Table.Cell>
+                                        <div className="">
+                                            <div className="mask mask-squircle w-12 h-12">
+                                                <img src={product.image} alt="product Image" />
+                                            </div>
+                                        </div>
+                                    </Table.Cell>
                                     <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
                                         {product.title}
                                     </Table.Cell>
