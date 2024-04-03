@@ -4,7 +4,7 @@ import { Table } from "flowbite-react";
 const AddedProduct = () => {
     const [cart] = useCart();
     const totalOfferPrice = cart.reduce((total, product) => {
-        return total + product.offerPrice;
+        return total + (product.quantity * product.offerPrice);
     }, 0);
     console.log("Total offerPrice:", totalOfferPrice);
     return (
