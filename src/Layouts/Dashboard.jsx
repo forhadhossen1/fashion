@@ -40,7 +40,7 @@ const Dashboard = () => {
                 </Sidebar>
 
             </div>
-            <div className="p-3">
+            <div className="p-3 w-full">
                 <Outlet />
             </div>
         </div>
