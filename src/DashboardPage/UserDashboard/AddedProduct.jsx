@@ -1,3 +1,4 @@
+import { HiTrash } from "react-icons/hi";
 import useCart from "../../Hooks/useCart";
 import { Table } from "flowbite-react";
 
@@ -42,6 +43,7 @@ const AddedProduct = () => {
                                     <Table.Cell>{product.size}</Table.Cell>
                                     <Table.Cell>{product.quantity}</Table.Cell>
                                     <Table.Cell>{product.quantity * product.offerPrice}</Table.Cell>
+                                    <Table.Cell><HiTrash className="text-red-700 text-xl bg-gray-300 rounded-sm"/></Table.Cell>
                                 </Table.Row>)
                             }
                         </Table.Body>
