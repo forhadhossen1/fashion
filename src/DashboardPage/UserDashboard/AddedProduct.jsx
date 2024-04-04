@@ -47,6 +47,9 @@ const AddedProduct = () => {
 
     return (
         <div className="">
+            <div>
+                <h1 className="text-center text-4xl font-bold py-12 text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-800">My Cart</h1>
+            </div>
             <div className="flex justify-between ">
                 <div>
                     <h3 className="text-3xl font-bold">Total Product : {cart.length}</h3>
