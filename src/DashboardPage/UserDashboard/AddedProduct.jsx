@@ -1,19 +1,57 @@
 import { HiTrash } from "react-icons/hi";
 import useCart from "../../Hooks/useCart";
 import { Table } from "flowbite-react";
+import useAxiosSecure from "../../Hooks/useAxiosSecure";
+import Swal from "sweetalert2";
 
 const AddedProduct = () => {
-    const [cart] = useCart();
+    const [cart, refetch] = useCart();
+    const axiosSecure = useAxiosSecure();
     const totalOfferPrice = cart.reduce((total, product) => {
         return total + (product.quantity * product.offerPrice);
     }, 0);
-    console.log("Total offerPrice:", totalOfferPrice);
+    // console.log("Total offerPrice:", totalOfferPrice);
+
+    const handleDeltete = (id) => {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+                axiosSecure.delete(`/cart/${id}`)
+                    .then(res => {
+                        if (res.data.deletedCount > 0) {
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your cart has been deleted.",
+                                icon: "success"
+                            });
+
+                            refetch();
+                        }
+                    })
+            }
+        });
+    }
+
+
+
+
+
     return (
         <div className="">
-            <div className=" gap-5 ">
-                <h3 className="text-3xl font-bold">Total Product : {cart.length}</h3>
+            <div className="flex justify-between ">
+                <div>
+                    <h3 className="text-3xl font-bold">Total Product : {cart.length}</h3>
 
-                <h3 className="text-3xl font-bold">Total Price : {totalOfferPrice}</h3>
+                    <h3 className="text-3xl font-bold">Total Price : ${totalOfferPrice} </h3>
+                </div>
             </div>
 
             <div className="w-full mt-12 ">
@@ -42,8 +80,11 @@ const AddedProduct = () => {
                                     </Table.Cell>
                                     <Table.Cell>{product.size}</Table.Cell>
                                     <Table.Cell>{product.quantity}</Table.Cell>
-                                    <Table.Cell>{product.quantity * product.offerPrice}</Table.Cell>
-                                    <Table.Cell><HiTrash className="text-red-700 text-xl bg-gray-300 rounded-sm"/></Table.Cell>
+                                    <Table.Cell>${product.quantity * product.offerPrice}</Table.Cell>
+
+                                    <Table.Cell>
+                                        <button onClick={() => handleDeltete(product._id)}><HiTrash className="text-red-700 text-xl bg-gray-300 rounded-sm" /></button>
+                                    </Table.Cell>
                                 </Table.Row>)
                             }
                         </Table.Body>
