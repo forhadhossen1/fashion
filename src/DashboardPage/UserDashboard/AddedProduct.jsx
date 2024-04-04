@@ -1,8 +1,9 @@
 import { HiTrash } from "react-icons/hi";
 import useCart from "../../Hooks/useCart";
-import { Table } from "flowbite-react";
+import { Button, Table } from "flowbite-react";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const AddedProduct = () => {
     const [cart, refetch] = useCart();
@@ -51,6 +52,15 @@ const AddedProduct = () => {
                     <h3 className="text-3xl font-bold">Total Product : {cart.length}</h3>
 
                     <h3 className="text-3xl font-bold">Total Price : ${totalOfferPrice} </h3>
+                </div>
+                <div>
+                    {cart.length ?
+                        <Link to=''>
+                            <Button gradientMonochrome="info" className="px-8">Pay</Button>
+                        </Link>
+                        :
+                        <Button gradientMonochrome="info" className="px-8" disabled>Pay</Button>
+                    }
                 </div>
             </div>
 
