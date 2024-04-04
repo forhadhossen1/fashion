@@ -47,8 +47,8 @@ const AddedProduct = () => {
 
     return (
         <div className="">
-            <div>
-                <h1 className="text-center text-4xl font-bold py-12 text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-800">My Cart</h1>
+            <div className="mb-12">
+                <h1 className="text-center text-4xl font-bold  text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-800 border-b-4 py-2 w-1/2 mx-auto border-gray-600">My Cart</h1>
             </div>
             <div className="flex justify-between ">
                 <div>
@@ -76,6 +76,7 @@ const AddedProduct = () => {
                             <Table.HeadCell>Size</Table.HeadCell>
                             <Table.HeadCell>Quantity</Table.HeadCell>
                             <Table.HeadCell>Price</Table.HeadCell>
+                            <Table.HeadCell>Delete</Table.HeadCell>
 
                         </Table.Head>
                         <Table.Body className="divide-y">
