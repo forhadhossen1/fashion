@@ -37,15 +37,17 @@ const SignUp = () => {
                     const loggedUser = result.user;
                     console.log(loggedUser);
                     updateUserProfile(data.name, data?.photoUrl)
-                    const userInfo = {
-                        name: data.name,
-                        email: data.email,
-                    }
+
                         .then(() => {
+                            const userInfo = {
+                                name: data.name,
+                                email: data.email,
+                            }
                             // console.log('user profile info update')
                             axiosPublic.post('/users', userInfo)
                                 .then(res => {
                                     if (res.data.insertedId) {
+                                        // console.log('Users added to the data')
                                         formik.resetForm();
 
                                         Swal.fire({
