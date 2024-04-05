@@ -10,6 +10,7 @@ import Kids from "../Pages/Kids/Kids";
 import Dashboard from "../Layouts/Dashboard";
 import AddedProduct from "../DashboardPage/UserDashboard/AddedProduct";
 import UserPanel from "../DashboardPage/UserDashboard/UserPanel";
+import AllUsers from "../DashboardPage/AdminDashboard/AllUsers";
 
 const router = createBrowserRouter([
     {
@@ -59,6 +60,11 @@ const router = createBrowserRouter([
                 element: <AddedProduct />
             },
 
+            //Admin routs.................... 
+            {
+                path: 'allUsers',
+                element: <AllUsers />
+            }
         ]
     }
 ]);
