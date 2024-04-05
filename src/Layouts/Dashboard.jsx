@@ -21,17 +21,17 @@ const Dashboard = () => {
                                                 All Users
                                             </Sidebar.Item>
                                         </Link>
-                                        <Link to='/dashboard/allusers'>
+                                        <Link to='/dashboard/manageUsers'>
                                             <Sidebar.Item icon={HiUser}>
                                                 Manage Users
                                             </Sidebar.Item>
                                         </Link>
-                                        <Link to='/dashboard/allusers'>
+                                        <Link to='/dashboard/addProduct'>
                                             <Sidebar.Item icon={HiClipboardList}>
                                                 Add Product
                                             </Sidebar.Item>
                                         </Link>
-                                        <Link to='/dashboard/allusers'>
+                                        <Link to='/dashboard/manageProduct'>
                                             <Sidebar.Item icon={HiPencilAlt}>
                                                 Manage Product
                                             </Sidebar.Item>
