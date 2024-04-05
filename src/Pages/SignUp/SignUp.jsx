@@ -1,10 +1,10 @@
 import { useFormik } from "formik";
-import { FcGoogle } from "react-icons/fc";
 import { Link, useNavigate } from "react-router-dom";
 import * as Yup from 'yup';
 import useAuth from "../../Hooks/useAuth";
 import Swal from "sweetalert2";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
+import GoogleLogin from "../../Components/SocialLogin/GoogleLogin";
 
 const SignUp = () => {
     const axiosPublic = useAxiosPublic();
@@ -133,7 +133,7 @@ const SignUp = () => {
                     <div className="text-center py-2 ">OR</div>
 
                     <div className="bg-gray-200 p-2 flex justify-center rounded-lg">
-                        <FcGoogle className="text-center text-3xl" />
+                       <GoogleLogin/>
                     </div>
 
                     <p className="mt-4 block text-center font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">

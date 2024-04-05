@@ -1,7 +1,8 @@
-import { FcGoogle } from "react-icons/fc";
+
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import Swal from "sweetalert2";
+import GoogleLogin from "../../Components/SocialLogin/GoogleLogin";
 
 const Login = () => {
     const { signIn } = useAuth()
@@ -79,7 +80,7 @@ const Login = () => {
                     <div className="text-center py-2 ">OR</div>
 
                     <div className="bg-gray-200 p-2 flex justify-center rounded-lg">
-                        <FcGoogle className="text-center text-3xl" />
+                        <GoogleLogin />
                     </div>
 
                     <p className="mt-4 block text-center font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
