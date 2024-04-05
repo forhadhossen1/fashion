@@ -1,5 +1,5 @@
 import { Sidebar } from "flowbite-react";
-import { HiChartPie, HiClipboardList, HiHome, HiInbox, HiPencilAlt, HiShoppingBag, HiUser, HiUserGroup, HiViewBoards } from "react-icons/hi";
+import { HiChartPie, HiClipboardList, HiHome, HiInbox, HiPencilAlt, HiShoppingBag, HiUserGroup, HiViewBoards } from "react-icons/hi";
 import { Link, Outlet } from "react-router-dom";
 
 const Dashboard = () => {
@@ -19,11 +19,6 @@ const Dashboard = () => {
                                         <Link to='/dashboard/allusers'>
                                             <Sidebar.Item icon={HiUserGroup}>
                                                 All Users
-                                            </Sidebar.Item>
-                                        </Link>
-                                        <Link to='/dashboard/manageUsers'>
-                                            <Sidebar.Item icon={HiUser}>
-                                                Manage Users
                                             </Sidebar.Item>
                                         </Link>
                                         <Link to='/dashboard/addProduct'>
