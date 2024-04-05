@@ -11,6 +11,9 @@ import Dashboard from "../Layouts/Dashboard";
 import AddedProduct from "../DashboardPage/UserDashboard/AddedProduct";
 import UserPanel from "../DashboardPage/UserDashboard/UserPanel";
 import AllUsers from "../DashboardPage/AdminDashboard/AllUsers";
+import ManageUsers from "../DashboardPage/AdminDashboard/ManageUsers";
+import AddProduct from "../DashboardPage/AdminDashboard/AddProduct";
+import ManageProduct from "../DashboardPage/AdminDashboard/ManageProduct";
 
 const router = createBrowserRouter([
     {
@@ -64,6 +67,18 @@ const router = createBrowserRouter([
             {
                 path: 'allUsers',
                 element: <AllUsers />
+            },
+            {
+                path: 'manageUsers',
+                element: <ManageUsers />
+            },
+            {
+                path: 'addProduct',
+                element: <AddProduct />
+            },
+            {
+                path: 'manageProduct',
+                element: <ManageProduct />
             }
         ]
     }
