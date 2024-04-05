@@ -4,8 +4,10 @@ import { Link, useNavigate } from "react-router-dom";
 import * as Yup from 'yup';
 import useAuth from "../../Hooks/useAuth";
 import Swal from "sweetalert2";
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
 
 const SignUp = () => {
+    const axiosPublic = useAxiosPublic();
     const { createUser, updateUserProfile } = useAuth();
     const navigate = useNavigate();
 
@@ -35,18 +37,29 @@ const SignUp = () => {
                     const loggedUser = result.user;
                     console.log(loggedUser);
                     updateUserProfile(data.name, data?.photoUrl)
+                    const userInfo = {
+                        name: data.name,
+                        email: data.email,
+                    }
                         .then(() => {
-                            console.log('user profile info update')
-                            formik.resetForm();
+                            // console.log('user profile info update')
+                            axiosPublic.post('/users', userInfo)
+                                .then(res => {
+                                    if (res.data.insertedId) {
+                                        formik.resetForm();
 
-                            Swal.fire({
-                                position: "center",
-                                icon: "success",
-                                title: "User create success",
-                                showConfirmButton: false,
-                                timer: 1000
-                            });
-                            navigate('/')
+                                        Swal.fire({
+                                            position: "center",
+                                            icon: "success",
+                                            title: "User create success",
+                                            showConfirmButton: false,
+                                            timer: 1000
+                                        });
+                                        navigate('/')
+                                    }
+                                })
+
+
                         })
                         .catch(error => console.log(error))
                 })
