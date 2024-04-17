@@ -2,7 +2,7 @@
 const ManageProduct = () => {
     return (
         <div>
-            Yesh Manage Product Page.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo aliquid atque qui animi, ipsum nesciunt ullam, ratione molestiae voluptas, corporis maxime vero inventore quos minus? Dolores in voluptate voluptas consectetur!
         </div>
     );
 };
