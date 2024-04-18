@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query"
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import { Table } from "flowbite-react";
+import { HiTrash } from "react-icons/hi";
 
 const AllUsers = () => {
     const axiosSecure = useAxiosSecure();
@@ -12,6 +13,12 @@ const AllUsers = () => {
             return res.data;
         }
     })
+
+
+    const handleDelteteUser = user =>{
+
+    }
+
     return (
         <div>
             <div className="flex flex-col md:flex-row justify-between pt-5">
@@ -40,10 +47,10 @@ const AllUsers = () => {
                                     </Table.Cell>
                                     <Table.Cell>{user.email}</Table.Cell>
                                     <Table.Cell>{user.role}</Table.Cell>
-                                    {/* 
+                                    
                                     <Table.Cell>
-                                        <button onClick={() => handleDeltete(product._id)}><HiTrash className="text-red-700 text-xl bg-gray-300 rounded-sm" /></button>
-                                    </Table.Cell> */}
+                                        <button onClick={() => handleDelteteUser(user._id)}><HiTrash className="text-red-700 text-xl bg-gray-300 rounded-sm" /></button>
+                                    </Table.Cell>
                                 </Table.Row>)
                             }
                         </Table.Body>
