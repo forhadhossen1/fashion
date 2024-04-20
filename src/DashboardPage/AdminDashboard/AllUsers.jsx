@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query"
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import { Table } from "flowbite-react";
-import { HiTrash, HiUserGroup} from "react-icons/hi";
+import { HiTrash, HiUserGroup } from "react-icons/hi";
 import Swal from "sweetalert2";
 
 const AllUsers = () => {
@@ -14,6 +14,23 @@ const AllUsers = () => {
             return res.data;
         }
     })
+
+    const handleMakeAdmin = (id) => {
+        axiosSecure.patch(`/users/admin/${id}`)
+            .then(res => {
+                // console.log(res.data)
+                if (res.data.modifiedCount > 0) {
+                    refetch();
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: 'Now he is Admin !',
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
+            })
+    }
 
 
     const handleDelteteUser = (id) => {
@@ -72,7 +89,7 @@ const AllUsers = () => {
                                     </Table.Cell>
                                     <Table.Cell>{user.email}</Table.Cell>
                                     <Table.Cell>
-                                        <button onClick={() => handleDelteteUser(user._id)}><HiUserGroup className="text-red-700 text-xl  rounded-sm" /></button>
+                                        {user.role === 'admin' ? 'Admin' : <button onClick={() => handleMakeAdmin(user._id)}><HiUserGroup className="text-red-700 text-xl  rounded-sm" /></button>}
                                     </Table.Cell>
 
                                     <Table.Cell>
