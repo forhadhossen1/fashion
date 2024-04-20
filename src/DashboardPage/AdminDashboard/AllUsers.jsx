@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query"
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import { Table } from "flowbite-react";
-import { HiTrash } from "react-icons/hi";
+import { HiTrash, HiUserGroup} from "react-icons/hi";
 import Swal from "sweetalert2";
 
 const AllUsers = () => {
@@ -71,8 +71,10 @@ const AllUsers = () => {
                                         {user.name}
                                     </Table.Cell>
                                     <Table.Cell>{user.email}</Table.Cell>
-                                    <Table.Cell>{user.role}</Table.Cell>
-                                    
+                                    <Table.Cell>
+                                        <button onClick={() => handleDelteteUser(user._id)}><HiUserGroup className="text-red-700 text-xl  rounded-sm" /></button>
+                                    </Table.Cell>
+
                                     <Table.Cell>
                                         <button onClick={() => handleDelteteUser(user._id)}><HiTrash className="text-red-700 text-xl bg-gray-300 rounded-sm" /></button>
                                     </Table.Cell>
