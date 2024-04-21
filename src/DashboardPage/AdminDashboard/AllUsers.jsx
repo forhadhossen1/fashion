@@ -22,7 +22,7 @@ const AllUsers = () => {
                 if (res.data.modifiedCount > 0) {
                     refetch();
                     Swal.fire({
-                        position: "top-end",
+                        position: "center",
                         icon: "success",
                         title: 'Now he is Admin !',
                         showConfirmButton: false,

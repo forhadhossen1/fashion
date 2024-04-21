@@ -8,16 +8,16 @@ const Header = () => {
   const { user, logOut, loading } = useAuth();
   const [cart] = useCart();
 
-  if (loading) {
-    return <div style={{
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      height: '100vh',
-    }}>
-      <div className="w-24 h-24 border-4 border-dashed rounded-full animate-spin dark:border-violet-400 flex justify-center items-center"></div>
-    </div>
-  }
+  // if (loading) {
+  //   return <div style={{
+  //     display: 'flex',
+  //     justifyContent: 'center',
+  //     alignItems: 'center',
+  //     height: '100vh',
+  //   }}>
+  //     <div className="w-24 h-24 border-4 border-dashed rounded-full animate-spin dark:border-violet-400 flex justify-center items-center"></div>
+  //   </div>
+  // }
 
 
   const handleLogOut = () => {
