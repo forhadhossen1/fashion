@@ -1,11 +1,12 @@
 import { Sidebar } from "flowbite-react";
 import { HiChartPie, HiClipboardList, HiHome, HiInbox, HiPencilAlt, HiShoppingBag, HiUserGroup, HiViewBoards } from "react-icons/hi";
 import { Link, Outlet } from "react-router-dom";
+import useAdmin from "../Hooks/useAdmin";
 
 const Dashboard = () => {
 
     // TODO : get isAdmin value from the database
-    const isAdmin = true;
+    const [isAdmin] = useAdmin();
     return (
         <div className="flex">
             <div>
