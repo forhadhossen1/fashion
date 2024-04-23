@@ -1,5 +1,11 @@
+import Swal from "sweetalert2";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
+import { useForm } from "react-hook-form";
+import { FaList } from "react-icons/fa";
+
+const imgae_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
+const imgae_hosting_api = `https://api.imgbb.com/1/upload?key=${imgae_hosting_key}`
 
 const AddProduct = () => {
     const axiosPublic = useAxiosPublic();
@@ -42,16 +48,14 @@ const AddProduct = () => {
     const { register, handleSubmit, reset } = useForm();
     return (
         <div className="bg-slate-200  p-10 rounded-xl">
-            <SectionTitle heading={'add an item'} subHeading={"What's new?"}></SectionTitle>
-
             <div>
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                     <div className="form-control w-full ">
                         <label className="label">
-                            <span className="label-text font-bold">Recipe Name*</span>
+                            <span className="label-text font-bold">Title*</span>
                         </label>
-                        <input {...register("name", { required: true })}
-                            type="text" placeholder="Recipe name" className="input input-bordered w-full " />
+                        <input {...register("title", { required: true })}
+                            type="text" placeholder="Product title" className="input input-bordered w-full " />
 
                     </div>
 
@@ -65,11 +69,9 @@ const AddProduct = () => {
                             <select defaultValue='default' {...register('category', { required: true })}
                                 className="select select-bordered w-full ">
                                 <option disabled value='default'>Select a category</option>
-                                <option value='salad'>Salad</option>
-                                <option value='pizza'>Pizza</option>
-                                <option value='soup'>Soup</option>
-                                <option value='dessert'>Dessert</option>
-                                <option value='drinks'>Drinks</option>
+                                <option value='salad'>Best-sale</option>
+                                <option value='trend-fashion'>Trend-fashion</option>
+                                <option value='new'>New</option>
                             </select>
                         </div>
 
@@ -95,7 +97,7 @@ const AddProduct = () => {
                     </div>
 
                     {/* <input  className="btn btn-block" type="submit" /> */}
-                    <button className="btn btn-block bg-gradient-to-r from-orange-400 to-red-600" >Add Item <FaUtensils /> </button>
+                    <button className="btn btn-block bg-gradient-to-r from-orange-400 to-red-600" >Add Product <FaList /> </button>
                 </form>
             </div>
         </div>
