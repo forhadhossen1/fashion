@@ -22,21 +22,23 @@ const AddProduct = () => {
         });
         if (res.data.success) {
             // now send the menu item data to the server with the image url 
-            const menuItem = {
-                name: data.name,
+            const productItem = {
+                title: data.title,
                 category: data.category,
+                type: data.type,
+                offerPercentage: data.offerPercentage,
                 price: parseFloat(data.price),
-                recipe: data.details,
+                offerPrice: parseFloat(data.offerPrice),
                 image: res.data.data.display_url
             }
 
-            const menuRes = await axiosSecure.post('/menu', menuItem);
+            const menuRes = await axiosSecure.post('/product', productItem);
             console.log(menuRes.data);
             if (menuRes.data.insertedId) {
                 reset();
                 Swal.fire({
                     title: "Success",
-                    text: `${data.name} is added to the menu.`,
+                    text: `${data.name} is added to the product.`,
                     icon: "success"
                 });
             }
@@ -47,7 +49,10 @@ const AddProduct = () => {
 
     const { register, handleSubmit, reset } = useForm();
     return (
-        <div className="bg-slate-200  p-10 rounded-xl">
+        <div className="bg-slate-200  p-10 rounded-xl h-full">
+            <div className="text-center text-4xl font-bold py-12">
+                <h1>Add Product</h1>
+            </div>
             <div>
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                     <div className="form-control w-full ">
@@ -79,7 +84,7 @@ const AddProduct = () => {
                             <label className="label">
                                 <span className="label-text font-bold">Type*</span>
                             </label>
-                            <select defaultValue='default' {...register('category', { required: true })}
+                            <select defaultValue='default' {...register('type', { required: true })}
                                 className="select select-bordered w-full ">
                                 <option disabled value='default'>Select a Type</option>
                                 <option value='men'>Men</option>
