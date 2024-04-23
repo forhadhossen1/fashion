@@ -4,7 +4,7 @@ const useBanner = () => {
     const [banners, setBanner] = useState([]);
     const [loading, setLoading] = useState([true]);
 
-    fetch('http://localhost:5000/banner')
+    fetch('https://fashion-server-topaz.vercel.app/banner')
         .then(res => res.json())
         .then(data => {
             setBanner(data);

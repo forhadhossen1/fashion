@@ -5,7 +5,7 @@ const useProduct = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:5000/product')
+        fetch('https://fashion-server-topaz.vercel.app/product')
             .then(res => res.json())
             .then(data => {
                 setProducts(data)
