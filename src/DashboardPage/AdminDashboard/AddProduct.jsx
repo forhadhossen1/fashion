@@ -74,24 +74,50 @@ const AddProduct = () => {
                                 <option value='new'>New</option>
                             </select>
                         </div>
-
-                        {/* price */}
-                        <div className="form-control w-full md:w-1/2">
+                        {/* type */}
+                        <div className="form-control w-full md:w-1/2 ">
                             <label className="label">
-                                <span className="label-text font-bold">Price*</span>
+                                <span className="label-text font-bold">Type*</span>
                             </label>
-                            <input {...register("price", { required: true })}
-                                type="text" placeholder="Recipe price" className="input input-bordered w-full " />
+                            <select defaultValue='default' {...register('category', { required: true })}
+                                className="select select-bordered w-full ">
+                                <option disabled value='default'>Select a Type</option>
+                                <option value='men'>Men</option>
+                                <option value='women'>Women</option>
+                                <option value='kid'>Kid</option>
+                            </select>
                         </div>
                     </div>
 
-                    <div className="form-control">
-                        <label className="label">
-                            <span className="label-text font-bold">Recipe Details*</span>
-                        </label>
-                        <textarea {...register("details")}
-                            className="textarea textarea-bordered h-24" placeholder="Recie Details"></textarea>
+
+                    <div className="felx-col md:flex gap-6">
+                        {/* offerpercentage */}
+                        <div className="form-control w-full md:w-1/2">
+                            <label className="label">
+                                <span className="label-text font-bold">Offerpercentage*</span>
+                            </label>
+                            <input {...register("offerPercentage", { required: true })}
+                                type="text" placeholder="offerPercentage" className="input input-bordered w-full " />
+                        </div>
+                        {/* offerPrice */}
+                        <div className="form-control w-full md:w-1/2">
+                            <label className="label">
+                                <span className="label-text font-bold">Offer Price*</span>
+                            </label>
+                            <input {...register("offerPrice", { required: true })}
+                                type="text" placeholder="offerPercentage" className="input input-bordered w-full " />
+                        </div>
                     </div>
+
+                    {/* price */}
+                    <div className="form-control w-full ">
+                        <label className="label">
+                            <span className="label-text font-bold">Price*</span>
+                        </label>
+                        <input {...register("price", { required: true })}
+                            type="text" placeholder="offerPercentage" className="input input-bordered w-full " />
+                    </div>
+
                     <div>
                         <input type="file" {...register("image", { required: true })} className="file-input file-input-bordered file-input-warning w-full max-w-xs" />
                     </div>
