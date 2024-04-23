@@ -1,10 +1,23 @@
 # Fashion Website
 
-Welcome to our fashion website! This repository hosts the codebase for our website, where you can explore the latest trends, browse through stunning collections, and stay updated with the fashion world.
+Welcome to our fashion website! This repository hosts the frontend codebase for our fashion website. Explore the latest trends, browse through stunning collections, and stay updated with the fashion world.
 
 ## Live Link
 
 You can access our website live at [Fashion Website](https://fashion-4afd6.web.app/).
+
+## Technologies Used
+
+- React.js: Frontend JavaScript library
+- Tailwind CSS: Utility-first CSS framework
+- Node.js: JavaScript runtime for backend development
+- Express.js: Web application framework for Node.js
+- MongoDB: NoSQL database for storing data
+- Firebase: Hosting the website
+
+## Backend Code
+
+The backend code for this project is hosted in a separate repository. You can find it [here](https://github.com/forhadhossen1/fashion-server).
 
 ## Features
 
@@ -14,33 +27,17 @@ You can access our website live at [Fashion Website](https://fashion-4afd6.web.a
 - **Fashion Blog:** Stay updated with our fashion blog, featuring articles on style tips, fashion news, and more.
 - **Secure Checkout:** Shop with confidence using our secure checkout process.
 
-## Technologies Used
-
-- HTML
-- CSS
-- JavaScript
-- [Firebase](https://firebase.google.com/): Hosting the website
-
 ## Getting Started
 
 To get a copy of this project up and running on your local machine for development and testing purposes, follow these steps:
 
-1. Clone this repository to your local machine using `git clone https://github.com/your-username/your-repository.git`
+1. Clone this repository to your local machine using `https://github.com/forhadhossen1/fashion`
 2. Navigate to the project directory.
-3. Open `index.html` in your preferred web browser.
+3. Install dependencies using `npm install`.
+4. Start the development server using `npm run dev`.
 
-## Contributing
-
-We welcome contributions from the community to improve our website. To contribute, please follow these steps:
-
-1. Fork this repository.
-2. Create a new branch for your feature (`git checkout -b feature/your-feature`).
-3. Make your changes and commit them (`git commit -am 'Add some feature'`).
-4. Push to the branch (`git push origin feature/your-feature`).
-5. Create a new Pull Request.
 
 ## Feedback
 
-We'd love to hear your feedback on our website! Feel free to [contact us](mailto:your-email@example.com) with any suggestions, questions, or concerns.
+We'd love to hear your feedback on our website! Feel free to [contact us](mailto:mr.forhad1030@gmail.com) with any suggestions, questions, or concerns.
 
-## License
